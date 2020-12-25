@@ -1,0 +1,33 @@
+.new {
+    
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: $color-grey-light-2;
+    height: 70vh;
+  }
+
+  &__mens {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0rem;
+
+    &-image1 {
+      width: 35rem;
+    }
+  }
+
+  &__title {
+    font-size: 3rem;
+    margin: 3rem 0rem 1.5rem 0rem;
+  }
+
+  &__price {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}

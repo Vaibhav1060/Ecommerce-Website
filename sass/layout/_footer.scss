@@ -1,0 +1,91 @@
+.footer {
+  &__container {
+    column-gap: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 4fr));
+    justify-content: center;
+
+    width: 90%;
+    margin: 0 auto;
+
+    @include respond(big-desktop) {
+      width: 60%;
+    }
+  }
+
+  &__col1 {
+    margin-bottom: 3rem;
+    justify-self: center;
+    &--heading {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    &--text {
+      font-size: 1.2rem;
+    }
+
+    &--number {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__col2 {
+    margin-bottom: 3rem;
+    justify-self: center;
+    &--heading {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__col3 {
+    margin-bottom: 3rem;
+    justify-self: center;
+    &--heading {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__col4 {
+    margin-bottom: 3rem;
+    justify-self: center;
+    &--heading {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    &__list {
+      display: flex;
+    }
+  }
+
+  &__item {
+    list-style-type: none;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: $color-grey-dark;
+  }
+
+  &__icon {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+
+    &:first-child {
+      padding-left: 0rem;
+    }
+  }
+
+  &__copyright {
+    text-align: center;
+    font-size: 1.2rem;
+    color: $color-grey-light-1;
+    margin-top: 3rem;
+  }
+}

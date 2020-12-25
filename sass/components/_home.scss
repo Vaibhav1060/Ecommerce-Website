@@ -1,0 +1,100 @@
+.home {
+  background-color: $color-grey-light-2;
+  overflow: hidden;
+  height: 100vh;
+ margin-bottom: 5rem;
+
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 5rem;
+    width: 80%;
+    margin: 0 auto;
+    height: 100vh;
+
+    @include respond(tab-port) {
+      width: 90%;
+    }
+
+    @include respond(phone) {
+      margin-top: 5rem;
+      flex-direction: column-reverse;
+      justify-content: center;
+    }
+  }
+
+  &__shape {
+    width: 40rem;
+    height: 40rem;
+    background-color: $color-grey-dark;
+    border-radius: 50%;
+
+    @include respond(tab-land) {
+      width: 35rem;
+      height: 35rem;
+    }
+
+    @include respond(tab-port) {
+      width: 28rem;
+      height: 28rem;
+    }
+
+    @include respond(phone) {
+      width: 20rem;
+      height: 20rem;
+    }
+  }
+
+  &__sneakers {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__data {
+    padding: 5rem 2rem;
+  }
+
+  &__image {
+    position: absolute;
+    width: 50rem;
+    max-width: initial;
+    top: 8%;
+    transform: rotate(-30deg);
+
+    @include respond(tab-land) {
+      width: 45rem;
+    }
+
+    @include respond(tab-port) {
+      width: 40rem;
+      margin-right: 8rem;
+    }
+
+    @include respond(phone) {
+      width: 30rem;
+    }
+  }
+
+  &__new {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+
+  &__title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+
+    @include respond(tab-port) {
+      font-size: 3rem;
+    }
+  }
+
+  &__description {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}

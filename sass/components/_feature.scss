@@ -1,0 +1,67 @@
+.featured {
+    
+  &__container {
+    column-gap: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 3fr));
+
+    width: 90%;
+    margin: 0 auto;
+
+    @include respond(big-desktop) {
+      width: 60%;
+    }
+  }
+}
+
+.sneaker {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-grey-light-2;
+  text-align: center;
+  position: relative;
+  border-radius: 0.5rem;
+  transition: all 0.5s ease;
+  margin-bottom: 5rem;
+  height: 55vh;
+
+  &:hover {
+    transform: translateY(-1rem);
+  }
+
+  &__image {
+    width: 15rem;
+    margin-bottom: 4rem;
+    transform: $rotate-image;
+  }
+
+  &__sale {
+    position: absolute;
+    top: 10%;
+    left: 0%;
+    font-size: 1.5rem;
+    transform: rotate(90deg);
+    padding: 0.1rem 1rem;
+    background-color: $color-grey-dark;
+    color: $color-primary;
+    border-radius: 0.5rem;
+  }
+
+  &__name {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  &__price {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+
+  &__icon {
+    margin-left: 1.5rem;
+  }
+}

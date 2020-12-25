@@ -1,0 +1,15 @@
+.women {
+  margin-bottom: 5rem;
+  &__container {
+    column-gap: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 4fr));
+
+    width: 90%;
+    margin: 0 auto;
+
+    @include respond(big-desktop) {
+      width: 60%;
+    }
+  }
+}
