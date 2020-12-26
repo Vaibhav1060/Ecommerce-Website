@@ -12,10 +12,17 @@ const replace = require("gulp-replace");
 const terser = require("gulp-terser");
 const browsersync = require("browser-sync").create();
 
+
 // File paths
 const files = {
   scssPath: "./sass/**/*.scss",
   jsPath: "./js/**/*.js",
+  htmlPath: "./*.html"
+};
+
+ function copyHtml() {
+ return src(files.htmlPath)
+      .pipe(dest("dist"));
 };
 
 // Sass task: compiles the style.scss file into style.css
@@ -89,6 +96,7 @@ function watchTask() {
 // then runs cacheBust, then watch task
 exports.default = series(
   parallel(scssTask, jsTask, browsersyncServe),
+  copyHtml,
   cacheBustTask,
   watchTask
 );
